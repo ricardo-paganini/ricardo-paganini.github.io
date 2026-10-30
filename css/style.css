@@ -6,19 +6,23 @@
 }
 
 :root {
-    --bg: #0f172a;
-    --text: #e2e8f0;
-    --text-secondary: #94a3b8;
-    --accent: #3b82f6;
-    --accent-hover: #2563eb;
-    --card: #1e293b;
-    --card-border: #334155;
-    --navbar-bg: rgba(15, 23, 42, 0.95);
+    --bg: #f3f8fe;
+    --text: #1b3556;
+    --text-secondary: #52698a;
+    --accent: #4aa3f2;
+    --accent-strong: #1d6fc4;
+    --accent-hover: #175aa1;
+    --accent-soft: #e3f0fd;
+    --support: #5fd0c5;
+    --card: #ffffff;
+    --card-border: #d9e6f5;
+    --card-border-strong: #b9d0ea;
+    --navbar-bg: rgba(255, 255, 255, 0.92);
     --transition: all 0.3s ease;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.5);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+    --shadow-sm: 0 1px 2px 0 rgba(29, 80, 140, 0.08);
+    --shadow: 0 4px 6px -1px rgba(29, 80, 140, 0.10), 0 2px 4px -2px rgba(29, 80, 140, 0.08);
+    --shadow-lg: 0 10px 15px -3px rgba(29, 80, 140, 0.12), 0 4px 6px -4px rgba(29, 80, 140, 0.10);
+    --shadow-xl: 0 20px 25px -5px rgba(29, 80, 140, 0.14), 0 8px 10px -6px rgba(29, 80, 140, 0.12);
 }
 
 html {
@@ -59,7 +63,7 @@ body {
     display: block;
     width: 60px;
     height: 4px;
-    background: var(--accent);
+    background: linear-gradient(90deg, var(--accent), var(--support));
     margin: 16px auto 0;
     border-radius: 2px;
 }
@@ -102,7 +106,7 @@ body {
 }
 
 .nav-logo:hover {
-    color: var(--accent);
+    color: var(--accent-strong);
 }
 
 .nav-menu {
@@ -132,7 +136,7 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--accent);
+    color: var(--accent-strong);
 }
 
 .nav-link:hover::after {
@@ -162,7 +166,7 @@ body {
     justify-content: center;
     text-align: center;
     padding: 120px 24px 60px;
-    background: var(--bg);
+    background: linear-gradient(180deg, #e3f0fd 0%, var(--bg) 100%);
 }
 
 .hero-content {
@@ -176,7 +180,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid var(--accent);
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), var(--shadow-lg);
+    box-shadow: 0 0 30px rgba(74, 163, 242, 0.3), var(--shadow-lg);
     animation: fadeInUp 0.8s ease forwards;
     opacity: 0;
 }
@@ -201,7 +205,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--accent);
+    color: var(--accent-strong);
     margin-bottom: 20px;
     animation: fadeInUp 0.8s ease 0.4s forwards;
     opacity: 0;
@@ -218,7 +222,7 @@ body {
 .hero-cta {
     display: inline-block;
     padding: 16px 40px;
-    background: var(--accent);
+    background: var(--accent-strong);
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
@@ -226,7 +230,7 @@ body {
     text-decoration: none;
     border-radius: 50px;
     transition: var(--transition);
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), var(--shadow);
+    box-shadow: 0 0 20px rgba(74, 163, 242, 0.3), var(--shadow);
     animation: fadeInUp 0.8s ease 0.8s forwards;
     opacity: 0;
 }
@@ -234,7 +238,7 @@ body {
 .hero-cta:hover {
     background: var(--accent-hover);
     transform: translateY(-3px);
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5), var(--shadow-lg);
+    box-shadow: 0 0 30px rgba(74, 163, 242, 0.5), var(--shadow-lg);
 }
 
 /* ========== SOBRE ========== */
@@ -251,7 +255,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
-    color: var(--accent);
+    color: var(--accent-strong);
     text-align: center;
     line-height: 1.6;
     margin-bottom: 40px;
@@ -260,6 +264,7 @@ body {
     border: 1px solid var(--card-border);
     border-radius: 16px;
     border-left: 4px solid var(--accent);
+    box-shadow: var(--shadow-sm);
 }
 
 .sobre-texto p {
@@ -287,16 +292,17 @@ body {
     border: 1px solid var(--accent);
     border-radius: 12px;
     position: relative;
+    box-shadow: var(--shadow-sm);
 }
 
 .sobre-foco::before {
     content: '▸';
-    color: var(--accent);
+    color: var(--accent-strong);
     margin-right: 8px;
 }
 
 .sobre-foco strong {
-    color: var(--accent);
+    color: var(--accent-strong);
 }
 
 @media (max-width: 768px) {
@@ -351,54 +357,60 @@ body {
 /* Projeto Destaque */
 .projeto-card--destaque {
     border: 2px solid var(--accent);
+    grid-row: span 2;
+}
+
+.projeto-card--destaque .projeto-img {
+    background: var(--bg);
+}
+
+.projeto-card--destaque .projeto-img img {
+    object-fit: contain;
 }
 
 .projeto-card--destaque:hover {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.2), var(--shadow-xl);
+    box-shadow: 0 0 30px rgba(74, 163, 242, 0.25), var(--shadow-xl);
 }
 
 .projeto-badge {
     position: absolute;
     top: 12px;
     right: 12px;
-    background: var(--accent);
-    color: white;
+    background: var(--accent-strong);
+    color: #ffffff;
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 600;
     z-index: 2;
-    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 2px 8px rgba(29, 111, 196, 0.35);
 }
 
 /* Projeto Em Breve */
 .projeto-card--em-breve {
-    opacity: 0.6;
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px dashed var(--card-border-strong);
+    box-shadow: none;
     cursor: default;
 }
 
 .projeto-card--em-breve:hover {
     transform: none;
-    box-shadow: var(--shadow);
-    border-color: var(--card-border);
+    box-shadow: none;
+    border-color: var(--card-border-strong);
 }
 
-.projeto-card--em-breve:hover .projeto-img img {
-    transform: none;
+.projeto-img--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent-soft), #e6f8f6);
+    color: var(--accent);
 }
 
-.projeto-status {
-    margin-top: 12px;
-}
-
-.status-badge {
-    display: inline-block;
-    background: var(--card-border);
-    color: var(--text-secondary);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 500;
+.projeto-img--placeholder svg {
+    width: 56px;
+    height: 56px;
 }
 
 /* Métricas do projeto */
@@ -428,13 +440,13 @@ body {
 }
 
 .tag {
-    background: rgba(59, 130, 246, 0.15);
-    color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--accent-hover);
     padding: 3px 10px;
     border-radius: 12px;
     font-size: 0.75rem;
     font-weight: 500;
-    border: 1px solid rgba(59, 130, 246, 0.3);
+    border: 1px solid #c4dffa;
 }
 
 .projeto-img {
@@ -484,6 +496,7 @@ body {
     border-radius: 16px;
     padding: 40px 24px;
     text-align: center;
+    box-shadow: var(--shadow-sm);
     transition: var(--transition);
     cursor: default;
 }
@@ -501,14 +514,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--card-border);
+    background: var(--accent-soft);
     border-radius: 12px;
-    color: var(--accent);
+    color: var(--accent-strong);
     transition: var(--transition);
 }
 
 .habilidade-card:hover .habilidade-icon {
-    background: var(--accent);
+    background: var(--accent-strong);
     color: #ffffff;
 }
 
@@ -567,6 +580,7 @@ body {
     text-decoration: none;
     border-radius: 12px;
     border: 1px solid var(--card-border);
+    box-shadow: var(--shadow-sm);
     transition: var(--transition);
     min-width: 280px;
     justify-content: center;
@@ -574,7 +588,7 @@ body {
 
 .contato-link:hover {
     border-color: var(--accent);
-    color: var(--accent);
+    color: var(--accent-strong);
     transform: translateX(5px);
     box-shadow: var(--shadow);
 }
@@ -587,9 +601,9 @@ body {
 
 /* ========== BOTÃO CURRÍCULO DESTAQUE ========== */
 .contato-link--destaque {
-    background: var(--accent) !important;
+    background: var(--accent-strong) !important;
     color: #ffffff !important;
-    border-color: var(--accent) !important;
+    border-color: var(--accent-strong) !important;
     font-weight: 600 !important;
 }
 
@@ -598,7 +612,7 @@ body {
     border-color: var(--accent-hover) !important;
     color: #ffffff !important;
     transform: translateX(5px) scale(1.02);
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.4), var(--shadow);
+    box-shadow: 0 0 25px rgba(74, 163, 242, 0.4), var(--shadow);
 }
 
 .contato-link--destaque svg {
@@ -704,6 +718,10 @@ body {
 
     .projetos-grid {
         grid-template-columns: 1fr;
+    }
+
+    .projeto-card--destaque {
+        grid-row: auto;
     }
 
     .habilidades-grid {

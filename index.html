@@ -3,313 +3,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Ricardo Paganini — Analista de Dados</title>
+    <title>Ricardo Paganini | Analista de Dados · BI · IA Generativa</title>
+    <meta name="description" content="Portfólio de Ricardo Paganini, Analista de Dados e BI. Estudos de caso com Python, SQL e Power BI seguindo o CRISP-DM, com apoio de IA generativa (Claude).">
+    <meta property="og:title" content="Ricardo Paganini | Analista de Dados · BI · IA Generativa">
+    <meta property="og:description" content="Estudos de caso com Python, SQL e Power BI, do problema de negócio à decisão.">
+    <meta property="og:image" content="./img/foto.JPEG">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230c1117'/><rect x='7' y='17' width='4' height='8' rx='1' fill='%235eead4'/><rect x='14' y='11' width='4' height='14' rx='1' fill='%235eead4'/><rect x='21' y='6' width='4' height='19' rx='1' fill='%235eead4'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
     <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Portfólio Profissional</a>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#hero" class="nav-link">Início</a></li>
-                <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                <li><a href="#projetos" class="nav-link">Projetos</a></li>
-                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-                <li><a href="#contato" class="nav-link">Contato</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#inicio" class="nav-logo"><span class="nav-logo-mark">RP</span> Ricardo Paganini</a>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#ia" class="nav-link">IA Generativa</a></li>
+                    <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                    <li><a href="#contato" class="nav-link nav-link--cta">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section id="inicio" class="hero">
+            <div class="hero-grid-bg" aria-hidden="true"></div>
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <p class="eyebrow"><span class="status-dot"></span> Disponível para novas oportunidades</p>
+                    <h1 class="hero-title">Transformo dados em <span class="highlight">decisões</span>.<br>Decisões em <span class="highlight">resultados</span>.</h1>
+                    <p class="hero-subtitle">
+                        Sou <strong>Ricardo Paganini</strong>, Analista de Dados e BI. Mais de 30 anos em tecnologia,
+                        agora focado em análise com <strong>Python, SQL e Power BI</strong>, usando
+                        <strong>IA generativa</strong> pra trabalhar mais rápido e com mais qualidade.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projetos" class="btn btn--primary">Ver projetos
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="./docs/curriculo.pdf" download class="btn btn--ghost">Baixar currículo
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        </a>
+                    </div>
+                    <ul class="hero-social">
+                        <li><a href="https://www.linkedin.com/in/ricardo-paganini/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                        </a></li>
+                        <li><a href="https://github.com/ricardo-paganini" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>
+                        </a></li>
+                        <li><a href="https://medium.com/@ricardo.paganini" target="_blank" rel="noopener" aria-label="Medium">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                        </a></li>
+                        <li><a href="mailto:ricardo.paganini@hotmail.com" aria-label="E-mail">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-photo">
+                        <img src="./img/foto.JPEG" alt="Foto de Ricardo Paganini">
+                    </div>
+                    <div class="hero-card hero-card--stats">
+                        <p class="hero-card-label">// resumo</p>
+                        <div class="stat"><span class="stat-number" data-count="30">30</span><span class="stat-plus">+</span><span class="stat-label">anos em tecnologia</span></div>
+                        <div class="stat"><span class="stat-number" data-count="3">3</span><span class="stat-label">estudos de caso publicados</span></div>
+                    </div>
+                    <div class="hero-card hero-card--chip">
+                        <span class="chip-icon" aria-hidden="true">✦</span> Python · SQL · Power BI · Claude
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faixa de ferramentas -->
+        <div class="tools-strip" aria-label="Ferramentas que utilizo">
+            <div class="tools-track">
+                <span>Python</span><span>SQL</span><span>Power BI</span><span>DAX</span><span>Pandas</span><span>Scikit-learn</span><span>Excel</span><span>Git</span><span>Jupyter</span><span>Claude</span><span>CRISP-DM</span>
+                <span aria-hidden="true">Python</span><span aria-hidden="true">SQL</span><span aria-hidden="true">Power BI</span><span aria-hidden="true">DAX</span><span aria-hidden="true">Pandas</span><span aria-hidden="true">Scikit-learn</span><span aria-hidden="true">Excel</span><span aria-hidden="true">Git</span><span aria-hidden="true">Jupyter</span><span aria-hidden="true">Claude</span><span aria-hidden="true">CRISP-DM</span>
             </div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <div class="hero-avatar">
-                <img src="./img/foto.JPEG" alt="Foto de perfil">
-            </div>
-            <h1 class="hero-title">Ricardo Paganini</h1>
-            <p class="hero-subtitle">Analista de Dados</p>
-            <p class="hero-description">"Transformo dados em decisões. Decisões em resultados."</p>
-            <a href="#projetos" class="hero-cta">Ver Projetos</a>
-        </div>
-    </section>
-
-    <!-- Sobre Mim -->
-    <section id="sobre" class="sobre section">
-        <div class="container">
-            <h2 class="section-title fade-in">Sobre Mim</h2>
-            <div class="sobre-content fade-in">
-                <p class="sobre-destaque">
-                    Mais de 30 anos transformando tecnologia em resultados. Hoje, dados são minha nova ferramenta de impacto.
-                </p>
-                <div class="sobre-texto">
+        <!-- Sobre -->
+        <section id="sobre" class="section">
+            <div class="container sobre-grid">
+                <div class="sobre-intro fade-in">
+                    <p class="section-tag">01 · Sobre mim</p>
+                    <h2 class="section-title">Experiência de gestão e tecnologia, agora a serviço dos dados.</h2>
+                    <p class="sobre-destaque">Mais de 30 anos transformando tecnologia em resultados. Hoje, dados são minha nova ferramenta de impacto.</p>
                     <p>
-                        Minha trajetória começou no suporte técnico, passou pela gestão de redes e coordenação de equipes de TI, 
-                        até chegar à liderança de projetos de inovação. O ponto de virada veio quando implantei um sistema de 
-                        <strong>Business Intelligence</strong> — foi ali que descobri o poder de transformar dados em decisões estratégicas.
+                        O ponto de virada veio quando implantei um sistema de <strong>Business Intelligence</strong>:
+                        foi ali que descobri o poder de transformar dados em decisões estratégicas. Desde então, atuo com
+                        <strong>automação e análise de dados</strong> nos setores de marketing, financeiro e comercial.
                     </p>
                     <p>
-                        Desde então, atuo com <strong>automação e análise de dados</strong> nos setores de marketing, financeiro e comercial, 
-                        integrando informações para otimizar resultados e apoiar decisões baseadas em evidências.
-                    </p>
-                    <p>
-                        Como empreendedor no e-commerce de moda, desenvolvi visão prática de negócios gerenciando tráfego pago 
-                        (Shopee, Facebook e Google) e analisando métricas de performance com foco em <strong>conversão e rentabilidade</strong>.
-                    </p>
-                    <p class="sobre-foco">
-                        Agora busco retomar minha trajetória corporativa em <strong>Análise de Dados e BI</strong>, 
+                        Agora busco retomar minha trajetória corporativa em <strong>Análise de Dados e BI</strong>,
                         combinando base técnica sólida com visão estratégica de gestão e empreendedorismo.
                     </p>
                 </div>
+
+                <ol class="timeline fade-in">
+                    <li class="timeline-item">
+                        <h3>Suporte técnico</h3>
+                        <p>Onde tudo começou: resolver problemas reais de quem usa a tecnologia.</p>
+                    </li>
+                    <li class="timeline-item">
+                        <h3>Redes e coordenação de TI</h3>
+                        <p>Gestão de redes e liderança de equipes de TI.</p>
+                    </li>
+                    <li class="timeline-item">
+                        <h3>Projetos de inovação e BI</h3>
+                        <p>Liderança de projetos de inovação e implantação de um sistema de Business Intelligence.</p>
+                    </li>
+                    <li class="timeline-item">
+                        <h3>Automação e análise de dados</h3>
+                        <p>Integração de informações para marketing, financeiro e comercial.</p>
+                    </li>
+                    <li class="timeline-item">
+                        <h3>Empreendedor no e-commerce de moda</h3>
+                        <p>Tráfego pago (Shopee, Facebook e Google) e métricas de performance com foco em conversão e rentabilidade.</p>
+                    </li>
+                    <li class="timeline-item timeline-item--now">
+                        <h3>Análise de Dados, BI e IA generativa</h3>
+                        <p>Estudos de caso com Python, SQL e Power BI, com o Claude como apoio no dia a dia.</p>
+                    </li>
+                </ol>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projetos -->
-    <section id="projetos" class="projetos section">
-        <div class="container">
-            <h2 class="section-title fade-in">Projetos</h2>
-            <div class="projetos-grid">
-
-                <!-- PROJETO DESTAQUE: Vitrine Brasil -->
-                <a href="https://github.com/ricardo-paganini/ecommerce-sales-analysis"
-                   target="_blank" rel="noopener" class="projeto-card projeto-card--destaque fade-in">
-                    <div class="projeto-badge">Destaque</div>
-                    <div class="projeto-img">
-                        <img src="./img/ecommerce-analysis.png"
-                             alt="Gráfico da receita mensal de 2025 da Vitrine Brasil, com pico em novembro">
-                    </div>
-                    <div class="projeto-info">
-                        <h3 class="projeto-titulo">Vitrine Brasil — Análise de Vendas de E-commerce</h3>
-                        <p class="projeto-descricao">
-                            Estudo de caso com Python e SQL, seguindo a metodologia CRISP-DM.
-                            Análise das vendas de 2025 de uma loja online fictícia para apoiar
-                            decisões de marketing e estoque antes da Black Friday.
-                        </p>
-                        <div class="projeto-metricas">
-                            <span class="metrica">🧹 Limpeza de dados</span>
-                            <span class="metrica">🗄️ SQL com JOINs</span>
-                            <span class="metrica">📈 5 perguntas de negócio</span>
-                        </div>
-                        <div class="projeto-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">SQLite</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">Seaborn</span>
-                            <span class="tag">CRISP-DM</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- PROJETO DESTAQUE: NetVida Telecom -->
-                <a href="https://github.com/ricardo-paganini/subscription-churn-analysis"
-                   target="_blank" rel="noopener" class="projeto-card projeto-card--destaque fade-in">
-                    <div class="projeto-badge">Destaque</div>
-                    <div class="projeto-img">
-                        <img src="./img/churn-analysis.png"
-                             alt="Gráfico da taxa de churn por quantidade de chamados de suporte, chegando a 73% com 4 chamados ou mais">
-                    </div>
-                    <div class="projeto-info">
-                        <h3 class="projeto-titulo">NetVida Telecom — Análise de Churn de Assinatura</h3>
-                        <p class="projeto-descricao">
-                            Estudo de caso com Python e SQL, seguindo a metodologia CRISP-DM.
-                            Análise dos cancelamentos de 2025 de um provedor de internet fictício,
-                            com um modelo de machine learning para apontar os clientes em risco.
-                        </p>
-                        <div class="projeto-metricas">
-                            <span class="metrica">🗄️ SQL com CTEs</span>
-                            <span class="metrica">🤖 Modelo Random Forest</span>
-                            <span class="metrica">📉 5 perguntas de negócio</span>
-                        </div>
-                        <div class="projeto-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">SQLite</span>
-                            <span class="tag">Scikit-learn</span>
-                            <span class="tag">Seaborn</span>
-                            <span class="tag">CRISP-DM</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- PROJETO DESTAQUE: Vértice Urbano -->
-                <a href="https://github.com/ricardo-paganini/construction-powerbi-dashboard"
-                   target="_blank" rel="noopener" class="projeto-card projeto-card--destaque fade-in">
-                    <div class="projeto-badge">Novo</div>
-                    <div class="projeto-img">
-                        <img src="./img/construction-dashboard.png"
-                             alt="Gráfico do painel Power BI com o estouro de custo por empreendimento, com as três obras críticas destacadas em vermelho">
-                    </div>
-                    <div class="projeto-info">
-                        <h3 class="projeto-titulo">Vértice Urbano — Painel de Vendas e Obras no Power BI</h3>
-                        <p class="projeto-descricao">
-                            Estudo de caso com Python, SQL e Power BI, seguindo a metodologia CRISP-DM.
-                            Análise das vendas, distratos, custos e prazos de uma construtora e incorporadora
-                            fictícia, entregue como um painel executivo para a diretoria.
-                        </p>
-                        <div class="projeto-metricas">
-                            <span class="metrica">📊 Painel com 3 páginas</span>
-                            <span class="metrica">🧮 Medidas em DAX</span>
-                            <span class="metrica">🏗️ 5 perguntas de negócio</span>
-                        </div>
-                        <div class="projeto-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Power BI</span>
-                            <span class="tag">DAX</span>
-                            <span class="tag">Power Query</span>
-                            <span class="tag">CRISP-DM</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Em breve (1 de 2) -->
-                <div class="projeto-card projeto-card--em-breve fade-in">
-                    <div class="projeto-img projeto-img--placeholder">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
-                    </div>
-                    <div class="projeto-info">
-                        <h3 class="projeto-titulo">Em breve</h3>
-                        <p class="projeto-descricao">Novo estudo de caso em preparação.</p>
-                    </div>
+        <!-- Projetos -->
+        <section id="projetos" class="section section--alt">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <p class="section-tag">02 · Projetos</p>
+                    <h2 class="section-title">Estudos de caso, do problema de negócio à decisão.</h2>
+                    <p class="section-lead">Todos seguem o CRISP-DM e estão documentados no GitHub, com código reproduzível.</p>
                 </div>
 
-                <!-- Em breve (2 de 2) -->
-                <div class="projeto-card projeto-card--em-breve fade-in">
-                    <div class="projeto-img projeto-img--placeholder">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
-                    </div>
-                    <div class="projeto-info">
-                        <h3 class="projeto-titulo">Em breve</h3>
-                        <p class="projeto-descricao">Novo estudo de caso em preparação.</p>
-                    </div>
-                </div>
+                <div class="projetos-list">
 
-                            </div>
-        </div>
-    </section>
+                    <!-- Vértice Urbano -->
+                    <article class="projeto fade-in">
+                        <a href="https://github.com/ricardo-paganini/construction-powerbi-dashboard" target="_blank" rel="noopener" class="projeto-img">
+                            <img src="./img/construction-dashboard.png" alt="Gráfico do painel Power BI com o estouro de custo por empreendimento, com as três obras críticas destacadas em vermelho" loading="lazy">
+                        </a>
+                        <div class="projeto-info">
+                            <div class="projeto-meta"><span class="badge badge--new">Novo</span><span class="projeto-area">Construção civil · BI</span></div>
+                            <h3 class="projeto-titulo">Vértice Urbano: painel de vendas e obras no Power BI</h3>
+                            <p class="projeto-descricao">
+                                Análise das vendas, distratos, custos e prazos de uma construtora e incorporadora fictícia,
+                                entregue como um painel executivo para a diretoria.
+                            </p>
+                            <ul class="projeto-destaques">
+                                <li>Painel com 3 páginas</li>
+                                <li>Medidas em DAX</li>
+                                <li>5 perguntas de negócio</li>
+                            </ul>
+                            <ul class="tags"><li>Python</li><li>SQL</li><li>Power BI</li><li>DAX</li><li>Power Query</li></ul>
+                            <a href="https://github.com/ricardo-paganini/construction-powerbi-dashboard" target="_blank" rel="noopener" class="projeto-link">Ver estudo de caso <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
 
-    <!-- Habilidades -->
-    <section id="habilidades" class="habilidades section">
-        <div class="container">
-            <h2 class="section-title fade-in">Habilidades</h2>
-            <div class="habilidades-grid">
-                <div class="habilidade-card fade-in">
-                    <div class="habilidade-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5"/>
-                            <path d="M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <h3>Python</h3>
-                    <p>Pandas, NumPy, Matplotlib, Scikit-learn, Análise Estatística</p>
-                </div>
-                <div class="habilidade-card fade-in">
-                    <div class="habilidade-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="3" y1="9" x2="21" y2="9"/>
-                            <line x1="9" y1="21" x2="9" y2="9"/>
-                        </svg>
-                    </div>
-                    <h3>Power BI</h3>
-                    <p>ETL, modelagem dimensional, DAX avançado, dashboards executivos para marketing, financeiro e comercial.</p>
-                </div>
-                <div class="habilidade-card fade-in">
-                    <div class="habilidade-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
-                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-                        </svg>
-                    </div>
-                    <h3>SQL</h3>
-                    <p>Consultas Complexas, Otimização, PostgreSQL, MySQL, SQL Server</p>
-                </div>
-                <div class="habilidade-card fade-in">
-                    <div class="habilidade-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                            <polyline points="14 2 14 8 20 8"/>
-                            <line x1="16" y1="13" x2="8" y2="13"/>
-                            <line x1="16" y1="17" x2="8" y2="17"/>
-                            <polyline points="10 9 9 9 8 9"/>
-                        </svg>
-                    </div>
-                    <h3>Excel</h3>
-                    <p>Limpeza, transformação, análise com fórmulas e tabelas dinâmicas, dashboards para insights e tomada de decisão.</p>
+                    <!-- NetVida Telecom -->
+                    <article class="projeto projeto--reverse fade-in">
+                        <a href="https://github.com/ricardo-paganini/subscription-churn-analysis" target="_blank" rel="noopener" class="projeto-img">
+                            <img src="./img/churn-analysis.png" alt="Gráfico da taxa de churn por quantidade de chamados de suporte, chegando a 73% com 4 chamados ou mais" loading="lazy">
+                        </a>
+                        <div class="projeto-info">
+                            <div class="projeto-meta"><span class="badge">Machine learning</span><span class="projeto-area">Telecom · Churn</span></div>
+                            <h3 class="projeto-titulo">NetVida Telecom: análise de churn de assinatura</h3>
+                            <p class="projeto-descricao">
+                                Análise dos cancelamentos de 2025 de um provedor de internet fictício,
+                                com um modelo de machine learning para apontar os clientes em risco.
+                            </p>
+                            <ul class="projeto-destaques">
+                                <li>SQL com CTEs</li>
+                                <li>Modelo Random Forest</li>
+                                <li>5 perguntas de negócio</li>
+                            </ul>
+                            <ul class="tags"><li>Python</li><li>SQL</li><li>SQLite</li><li>Scikit-learn</li><li>Seaborn</li></ul>
+                            <a href="https://github.com/ricardo-paganini/subscription-churn-analysis" target="_blank" rel="noopener" class="projeto-link">Ver estudo de caso <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Vitrine Brasil -->
+                    <article class="projeto fade-in">
+                        <a href="https://github.com/ricardo-paganini/ecommerce-sales-analysis" target="_blank" rel="noopener" class="projeto-img">
+                            <img src="./img/ecommerce-analysis.png" alt="Gráfico da receita mensal de 2025 da Vitrine Brasil, com pico em novembro" loading="lazy">
+                        </a>
+                        <div class="projeto-info">
+                            <div class="projeto-meta"><span class="badge">Análise exploratória</span><span class="projeto-area">E-commerce · Vendas</span></div>
+                            <h3 class="projeto-titulo">Vitrine Brasil: análise de vendas de e-commerce</h3>
+                            <p class="projeto-descricao">
+                                Análise das vendas de 2025 de uma loja online fictícia para apoiar
+                                decisões de marketing e estoque antes da Black Friday.
+                            </p>
+                            <ul class="projeto-destaques">
+                                <li>Limpeza de dados</li>
+                                <li>SQL com JOINs</li>
+                                <li>5 perguntas de negócio</li>
+                            </ul>
+                            <ul class="tags"><li>Python</li><li>SQL</li><li>SQLite</li><li>Pandas</li><li>Seaborn</li></ul>
+                            <a href="https://github.com/ricardo-paganini/ecommerce-sales-analysis" target="_blank" rel="noopener" class="projeto-link">Ver estudo de caso <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Em andamento -->
+                    <article class="projeto-wip fade-in">
+                        <div class="projeto-wip-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 26 12 18 20 22 30 10 38 14"/><polyline points="38 14 46 6" stroke-dasharray="3 3"/></svg>
+                        </div>
+                        <div>
+                            <div class="projeto-meta"><span class="badge badge--wip">Em andamento</span><span class="projeto-area">Varejo farmacêutico · Séries temporais</span></div>
+                            <h3 class="projeto-titulo">Previsão de demanda de uma rede de farmácias</h3>
+                            <p class="projeto-descricao">Estudo de caso de séries temporais com Python e Pandas para prever a demanda e apoiar o planejamento de estoque.</p>
+                        </div>
+                    </article>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contato -->
-    <section id="contato" class="contato section">
-        <div class="container">
-            <h2 class="section-title fade-in">Contato e Links Interessantes</h2>
-            <div class="contato-content fade-in">
-                <p class="contato-texto">Vamos conversar? Estou disponível para novas oportunidades e colaborações.</p>
-                <div class="contato-links">
-                    <a href="mailto:ricardo.paganini@hotmail.com" class="contato-link">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        <span>ricardo.paganini@hotmail.com</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/ricardo-paganini/" target="_blank" class="contato-link">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                            <rect x="2" y="9" width="4" height="12"/>
-                            <circle cx="4" cy="4" r="2"/>
-                        </svg>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/ricardo-paganini" target="_blank" class="contato-link">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                        </svg>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://medium.com/@ricardo.paganini" target="_blank" class="contato-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                            <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
-                        </svg>
-                        <span>Medium</span>
-                    </a>
-                    <a href="./docs/curriculo.pdf" download class="contato-link contato-link--destaque">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                            <polyline points="7 10 12 15 17 10"/>
-                            <line x1="12" y1="15" x2="12" y2="3"/>
-                        </svg>
-                        <span>Baixar Currículo</span>
-                    </a>
+        <!-- IA Generativa -->
+        <section id="ia" class="section ia-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <p class="section-tag">03 · IA Generativa</p>
+                    <h2 class="section-title">Dados + IA generativa: mais velocidade, sem abrir mão da validação.</h2>
+                    <p class="section-lead">
+                        Estou me especializando no <strong>Claude</strong>, a IA generativa da Anthropic, e uso ele como
+                        apoio em todas as etapas dos meus estudos de caso. A análise e a decisão final continuam sendo minhas.
+                    </p>
+                </div>
+
+                <div class="ia-grid">
+                    <div class="ia-card fade-in">
+                        <span class="ia-card-num">01</span>
+                        <h3>Prompt engineering</h3>
+                        <p>Instruções claras, com contexto, exemplos e formato de saída definido, quebrando tarefas grandes em etapas.</p>
+                    </div>
+                    <div class="ia-card fade-in">
+                        <span class="ia-card-num">02</span>
+                        <h3>SQL e Python com IA</h3>
+                        <p>Geração e revisão de queries SQL e código Pandas, sempre conferindo o resultado nos dados.</p>
+                    </div>
+                    <div class="ia-card fade-in">
+                        <span class="ia-card-num">03</span>
+                        <h3>Engenharia de contexto</h3>
+                        <p>Saber o que entregar pra IA (regras de negócio, dicionário de dados, objetivos) e o que deixar de fora.</p>
+                    </div>
+                    <div class="ia-card fade-in">
+                        <span class="ia-card-num">04</span>
+                        <h3>Projects, Skills e Claude Code</h3>
+                        <p>Organização do trabalho em projetos, processos repetíveis e apoio no código e no versionamento com Git.</p>
+                    </div>
+                    <div class="ia-card fade-in">
+                        <span class="ia-card-num">05</span>
+                        <h3>Documentação e storytelling</h3>
+                        <p>READMEs, explicações das análises e resumos de insights pensados pra quem toma a decisão.</p>
+                    </div>
+                    <div class="ia-card fade-in">
+                        <span class="ia-card-num">06</span>
+                        <h3>Avaliação crítica e uso responsável</h3>
+                        <p>Checagem de fatos, números e código, sem expor dados sensíveis e sabendo quando a IA não é a ferramenta certa.</p>
+                    </div>
+                </div>
+
+                <div class="cert fade-in">
+                    <div class="cert-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><polyline points="8.5 14 7 22 12 19.5 17 22 15.5 14"/></svg>
+                    </div>
+                    <div class="cert-text">
+                        <p class="cert-label">Certificação</p>
+                        <h3>Formação em Claude (Anthropic)</h3>
+                        <p>Curso em andamento, com certificação prevista para breve.</p>
+                    </div>
+                    <span class="badge badge--wip">Em preparação</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <!-- Habilidades -->
+        <section id="habilidades" class="section section--alt">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <p class="section-tag">04 · Habilidades</p>
+                    <h2 class="section-title">Stack técnica</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card fade-in">
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                        <h3>Python</h3>
+                        <p>Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn e análise estatística.</p>
+                    </div>
+                    <div class="skill-card fade-in">
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+                        <h3>SQL</h3>
+                        <p>Consultas complexas, JOINs, CTEs e otimização. PostgreSQL, MySQL, SQL Server e SQLite.</p>
+                    </div>
+                    <div class="skill-card fade-in">
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+                        <h3>Power BI</h3>
+                        <p>ETL, modelagem dimensional, DAX avançado e dashboards executivos para marketing, financeiro e comercial.</p>
+                    </div>
+                    <div class="skill-card fade-in">
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg></div>
+                        <h3>Excel</h3>
+                        <p>Limpeza, transformação, fórmulas, tabelas dinâmicas e dashboards para tomada de decisão.</p>
+                    </div>
+                    <div class="skill-card skill-card--ai fade-in">
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg></div>
+                        <h3>IA Generativa</h3>
+                        <p>Claude: prompt engineering, Projects, Skills e Claude Code aplicados à análise de dados.</p>
+                    </div>
+                    <div class="skill-card fade-in">
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="9" r="2.5"/><path d="M6 8.5v7"/><path d="M18 11.5c0 3-3 3.5-9.5 5.5"/></svg></div>
+                        <h3>Ferramentas e método</h3>
+                        <p>Git e GitHub, Jupyter Notebook, ambientes virtuais (venv) e metodologia CRISP-DM.</p>
+                    </div>
+                </div>
+
+                <!-- Como trabalho -->
+                <div class="process fade-in">
+                    <h3 class="process-title">Como eu trabalho: CRISP-DM em todos os projetos</h3>
+                    <ol class="process-steps">
+                        <li><span>1</span>Entendimento do negócio</li>
+                        <li><span>2</span>Entendimento dos dados</li>
+                        <li><span>3</span>Preparação dos dados</li>
+                        <li><span>4</span>Modelagem e análise</li>
+                        <li><span>5</span>Avaliação</li>
+                        <li><span>6</span>Entrega</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="section contato">
+            <div class="container">
+                <div class="contato-box fade-in">
+                    <p class="section-tag">05 · Contato</p>
+                    <h2 class="contato-title">Vamos conversar?</h2>
+                    <p class="contato-texto">Estou disponível para novas oportunidades e colaborações em Análise de Dados e BI.</p>
+                    <a href="mailto:ricardo.paganini@hotmail.com" class="contato-email">ricardo.paganini@hotmail.com</a>
+                    <div class="contato-links">
+                        <a href="https://www.linkedin.com/in/ricardo-paganini/" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn</a>
+                        <a href="https://github.com/ricardo-paganini" target="_blank" rel="noopener" class="btn btn--ghost">GitHub</a>
+                        <a href="https://medium.com/@ricardo.paganini" target="_blank" rel="noopener" class="btn btn--ghost">Medium</a>
+                        <a href="./docs/curriculo.pdf" download class="btn btn--primary">Baixar currículo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Ricardo Paganini. Todos os direitos reservados.</p>
+        <div class="container footer-container">
+            <p>&copy; <span id="year">2026</span> Ricardo Paganini</p>
+            <p class="footer-note">Analista de Dados · BI · IA Generativa</p>
         </div>
     </footer>
 

@@ -1,84 +1,77 @@
-// ========== NAVBAR SCROLL EFFECT ==========
+// ========== NAVBAR AO ROLAR ==========
 const navbar = document.getElementById('navbar');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
+const updateNavbar = () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+};
+window.addEventListener('scroll', updateNavbar);
+updateNavbar();
 
-// ========== MOBILE MENU ==========
+// ========== MENU MOBILE ==========
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
 hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
+    const isOpen = navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
 });
 
-// Fechar menu ao clicar em um link
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
     });
 });
 
-// ========== FADE-IN ON SCROLL ==========
-const fadeElements = document.querySelectorAll('.fade-in');
-
-const fadeInObserver = new IntersectionObserver((entries) => {
+// ========== FADE-IN AO ROLAR ==========
+const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            fadeInObserver.unobserve(entry.target);
+            fadeObserver.unobserve(entry.target);
         }
     });
-}, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-});
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-fadeElements.forEach(el => {
-    fadeInObserver.observe(el);
-});
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
-// ========== SMOOTH SCROLL FOR ANCHOR LINKS ==========
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+// ========== LINK ATIVO NO MENU ==========
+const sections = document.querySelectorAll('main section[id]');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + id);
             });
         }
     });
-});
+}, { rootMargin: '-45% 0px -50% 0px' });
 
-// ========== ACTIVE NAV LINK ON SCROLL ==========
-const sections = document.querySelectorAll('section[id]');
+sections.forEach(section => sectionObserver.observe(section));
 
-window.addEventListener('scroll', () => {
-    let current = '';
+// ========== CONTADOR DOS NÚMEROS DO HERO ==========
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
+if (!reduceMotion) {
+    document.querySelectorAll('.stat-number').forEach(el => {
+        const target = Number(el.dataset.count);
+        const duration = 1200;
+        const start = performance.now();
 
-        if (window.scrollY >= sectionTop - 100) {
-            current = section.getAttribute('id');
-        }
+        const tick = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(target * eased);
+            if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
     });
+}
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
-        }
-    });
-});
+// ========== ANO NO RODAPÉ ==========
+document.getElementById('year').textContent = new Date().getFullYear();

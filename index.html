@@ -83,7 +83,7 @@
                     <div class="hero-card hero-card--stats">
                         <p class="hero-card-label">// resumo</p>
                         <div class="stat"><span class="stat-number" data-count="30">30</span><span class="stat-plus">+</span><span class="stat-label">anos em tecnologia</span></div>
-                        <div class="stat"><span class="stat-number" data-count="3">3</span><span class="stat-label">estudos de caso publicados</span></div>
+                        <div class="stat"><span class="stat-number" data-count="4">4</span><span class="stat-label">estudos de caso publicados</span></div>
                     </div>
                     <div class="hero-card hero-card--chip">
                         <span class="chip-icon" aria-hidden="true">✦</span> Python · SQL · Power BI · Claude
@@ -158,13 +158,35 @@
 
                 <div class="projetos-list">
 
-                    <!-- Vértice Urbano -->
+                    <!-- Farmácias Boa Dose -->
                     <article class="projeto fade-in">
+                        <a href="https://github.com/ricardo-paganini/pharmacy-demand-forecast" target="_blank" rel="noopener" class="projeto-img">
+                            <img src="./img/demand-forecast.png" alt="Gráfico das vendas semanais de antigripal no segundo semestre de 2025: a regra atual fica acima da venda real e gera estoque parado, enquanto o modelo acompanha a venda real" loading="lazy">
+                        </a>
+                        <div class="projeto-info">
+                            <div class="projeto-meta"><span class="badge badge--new">Novo</span><span class="projeto-area">Varejo farmacêutico · Séries temporais</span></div>
+                            <h3 class="projeto-titulo">Farmácias Boa Dose: previsão de demanda</h3>
+                            <p class="projeto-descricao">
+                                Previsão das vendas semanais de 20 produtos de uma rede fictícia de farmácias,
+                                para substituir a regra de "repetir a semana passada" por um pedido de compra sugerido.
+                            </p>
+                            <ul class="projeto-destaques">
+                                <li>Erro de previsão 52% menor</li>
+                                <li>Sazonalidade, promoções e feriados</li>
+                                <li>6 perguntas de negócio</li>
+                            </ul>
+                            <ul class="tags"><li>Python</li><li>Pandas</li><li>Séries temporais</li><li>Scikit-learn</li><li>Seaborn</li></ul>
+                            <a href="https://github.com/ricardo-paganini/pharmacy-demand-forecast" target="_blank" rel="noopener" class="projeto-link">Ver estudo de caso <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Vértice Urbano -->
+                    <article class="projeto projeto--reverse fade-in">
                         <a href="https://github.com/ricardo-paganini/construction-powerbi-dashboard" target="_blank" rel="noopener" class="projeto-img">
                             <img src="./img/construction-dashboard.png" alt="Gráfico do painel Power BI com o estouro de custo por empreendimento, com as três obras críticas destacadas em vermelho" loading="lazy">
                         </a>
                         <div class="projeto-info">
-                            <div class="projeto-meta"><span class="badge badge--new">Novo</span><span class="projeto-area">Construção civil · BI</span></div>
+                            <div class="projeto-meta"><span class="badge">Business Intelligence</span><span class="projeto-area">Construção civil · BI</span></div>
                             <h3 class="projeto-titulo">Vértice Urbano: painel de vendas e obras no Power BI</h3>
                             <p class="projeto-descricao">
                                 Análise das vendas, distratos, custos e prazos de uma construtora e incorporadora fictícia,
@@ -181,7 +203,7 @@
                     </article>
 
                     <!-- NetVida Telecom -->
-                    <article class="projeto projeto--reverse fade-in">
+                    <article class="projeto fade-in">
                         <a href="https://github.com/ricardo-paganini/subscription-churn-analysis" target="_blank" rel="noopener" class="projeto-img">
                             <img src="./img/churn-analysis.png" alt="Gráfico da taxa de churn por quantidade de chamados de suporte, chegando a 73% com 4 chamados ou mais" loading="lazy">
                         </a>
@@ -203,7 +225,7 @@
                     </article>
 
                     <!-- Vitrine Brasil -->
-                    <article class="projeto fade-in">
+                    <article class="projeto projeto--reverse fade-in">
                         <a href="https://github.com/ricardo-paganini/ecommerce-sales-analysis" target="_blank" rel="noopener" class="projeto-img">
                             <img src="./img/ecommerce-analysis.png" alt="Gráfico da receita mensal de 2025 da Vitrine Brasil, com pico em novembro" loading="lazy">
                         </a>
@@ -221,18 +243,6 @@
                             </ul>
                             <ul class="tags"><li>Python</li><li>SQL</li><li>SQLite</li><li>Pandas</li><li>Seaborn</li></ul>
                             <a href="https://github.com/ricardo-paganini/ecommerce-sales-analysis" target="_blank" rel="noopener" class="projeto-link">Ver estudo de caso <span aria-hidden="true">→</span></a>
-                        </div>
-                    </article>
-
-                    <!-- Em andamento -->
-                    <article class="projeto-wip fade-in">
-                        <div class="projeto-wip-icon" aria-hidden="true">
-                            <svg viewBox="0 0 48 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 26 12 18 20 22 30 10 38 14"/><polyline points="38 14 46 6" stroke-dasharray="3 3"/></svg>
-                        </div>
-                        <div>
-                            <div class="projeto-meta"><span class="badge badge--wip">Em andamento</span><span class="projeto-area">Varejo farmacêutico · Séries temporais</span></div>
-                            <h3 class="projeto-titulo">Previsão de demanda de uma rede de farmácias</h3>
-                            <p class="projeto-descricao">Estudo de caso de séries temporais com Python e Pandas para prever a demanda e apoiar o planejamento de estoque.</p>
                         </div>
                     </article>
 

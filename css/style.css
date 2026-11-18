@@ -348,6 +348,13 @@ strong { color: var(--text); font-weight: 600; }
 .projeto-link { font-weight: 600; color: var(--accent); display: inline-flex; gap: 8px; align-items: center; }
 .projeto-link span { transition: transform var(--transition); }
 .projeto-link:hover span { transform: translateX(4px); }
+/* Projeto de IA generativa dentro da seção #ia */
+.ia-projeto { margin-top: 56px; position: relative; }
+.ia-projeto-tag { margin-bottom: 20px; }
+.projeto-links { display: flex; flex-wrap: wrap; gap: 12px 28px; }
+.projeto-link--alt { color: var(--text-muted); }
+.projeto-link--alt:hover { color: var(--accent); }
+
 
 .projeto-wip {
     display: flex; align-items: center; gap: 28px;
